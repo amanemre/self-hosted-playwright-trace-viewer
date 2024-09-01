@@ -34,4 +34,10 @@ log-remote-address = false
 [[advanced.headers]]
 source = "/playwright/*"
 
-headers = { Cross-Origin-Opener-Policy = "same-origin", Cross-Origin-Resource-Policy = "same-origin", Content-Security-Policy = "frame-ancestors *" }
+headers = { Cross-Origin-Opener-Policy = "same-origin",
+    Cross-Origin-Resource-Policy = "same-origin", 
+    Content-Security-Policy = "frame-ancestors *", 
+    Access-Control-Allow-Origin = "*",              # Allow access from any origin
+    Access-Control-Allow-Methods = "GET, OPTIONS",  # Specify allowed methods
+    Access-Control-Allow-Headers = "Content-Type"
+    }
